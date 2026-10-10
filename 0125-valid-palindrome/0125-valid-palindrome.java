@@ -1,21 +1,28 @@
 class Solution {
     public boolean isPalindrome(String s) {
+        int startIdx = 0;
+        int endIdx = s.length() - 1;
 
-        // 정렬 및 파싱
-        String lowerStrings = s.toLowerCase();
-        String removedStrings = lowerStrings.replaceAll("[^a-z0-9]", "");
+        while (startIdx < endIdx) {
+            char startChar = s.charAt(startIdx);
+            char endChar = s.charAt(endIdx);
 
-        int startIndex = 0;
-        int endIndex = removedStrings.length() - 1;
-        
-        // 비교
-        while (startIndex < endIndex) {
-            if (removedStrings.charAt(startIndex) != removedStrings.charAt(endIndex)) {
-                return false;
-            }  else {
-                startIndex++;
-                endIndex--;
+            if (!Character.isLetterOrDigit(startChar)) {
+                startIdx++;
+                continue;
             }
+
+            if (!Character.isLetterOrDigit(endChar)) {
+                endIdx--;
+                continue;
+            }
+
+            if (Character.toLowerCase(startChar) != Character.toLowerCase(endChar)) {
+                return false;
+            }
+
+            startIdx++;
+            endIdx--;
         }
 
         return true;
