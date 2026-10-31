@@ -68,4 +68,12 @@
 |  |
 | ------- |
 | [0141-linked-list-cycle](https://github.com/yunhobb/LeetCode/tree/master/0141-linked-list-cycle) |
+## Binary Search
+|  |
+| ------- |
+| [0278-first-bad-version](https://github.com/yunhobb/LeetCode/tree/master/0278-first-bad-version) |
+## Interactive
+|  |
+| ------- |
+| [0278-first-bad-version](https://github.com/yunhobb/LeetCode/tree/master/0278-first-bad-version) |
 <!---LeetCode Topics End-->
